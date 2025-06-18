@@ -1,5 +1,10 @@
 # 🚀 vLLM Inference API with Docker + Kubernetes
 
+![Docker](https://img.shields.io/badge/container-docker-blue)
+![Kubernetes](https://img.shields.io/badge/deployment-kubernetes-success)
+![vLLM](https://img.shields.io/badge/LLM-vLLM-green)
+
+
 This project demonstrates how to containerize and deploy a vLLM-based OpenAI-compatible inference server, simulating large model deployment (70B+) using smaller Hugging Face models.
 
 ## 📦 Model Used
