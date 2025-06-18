@@ -1,0 +1,23 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: vllm-api-deployment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vllm-api
+  template:
+    metadata:
+      labels:
+        app: vllm-api
+    spec:
+      containers:
+      - name: vllm
+        image: yourdockerhub/vllm-api:latest
+        ports:
+        - containerPort: 8000
+        resources:
+          limits:
+            nvidia.com/gpu: 1
+      restartPolicy: Always
